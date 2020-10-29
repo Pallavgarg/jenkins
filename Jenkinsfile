@@ -1,9 +1,15 @@
 pipeline {
-  agent { docker { image 'python:3.5.1' } }
+  agent any
   triggers {
         pollSCM('* * * * *')
     }
 
+  stages {
+    stage ("Code pull"){
+      steps{
+        checkout scm
+      }
+    }
     stage('build') {
       steps {
         sh 'python src/first.py'
