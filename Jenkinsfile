@@ -12,12 +12,12 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'python src/first.py'
+        bat 'python src/first.py'
       }
     }
     stage('test') {
       steps {
-        sh 'python -m pytest tests/'
+        bat 'python -m pytest tests/'
       }
     }
   }
