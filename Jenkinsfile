@@ -5,19 +5,15 @@ pipeline {
     }
 
   stages {
-    stage ("Code pull"){
-      steps{
-        checkout scm
-      }
-    }
+
     stage('build') {
       steps {
-        sh 'python src/first.py'
+        'python src/first.py'
       }
     }
     stage('test') {
       steps {
-        sh 'python -m pytest tests/'
+        'python -m pytest tests/'
       }
     }
   }
