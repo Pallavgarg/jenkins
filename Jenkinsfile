@@ -8,12 +8,12 @@ pipeline {
 
     stage('build') {
       steps {
-        'python src/first.py'
+        sh 'python src/first.py'
       }
     }
     stage('test') {
       steps {
-        'python -m pytest tests/'
+        sh 'python -m pytest tests/'
       }
     }
   }
