@@ -12,8 +12,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'cd C:\Users\ADMIN\PycharmProjects\JenkinsDemo\src'
-        sh 'python first.py'
+        sh 'python src/first.py'
       }
     }
     stage('test') {
