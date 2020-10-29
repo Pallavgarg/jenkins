@@ -4,12 +4,6 @@ pipeline {
         pollSCM('* * * * *')
     }
 
-  stages {
-    stage ("Code pull"){
-      steps{
-        checkout scm
-      }
-    }
     stage('build') {
       steps {
         sh 'python src/first.py'
