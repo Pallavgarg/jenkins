@@ -8,6 +8,4 @@ def sums(a,b):
 
 if __name__ == '__main__':
     calc()
-    a= 2
-    b= 3
-    sums(a,b)
+    sums(7,8)
