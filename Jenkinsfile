@@ -23,7 +23,7 @@ pipeline {
 
     stage('sonarqubes') {
       steps {
-        'sonar-scanner.bat -D"sonar.projectKey=jenkins-pipeline" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=30b3f3338a4d7df78d7648df6ec9a2d703089a07"'
+        bat 'sonar-scanner.bat -D"sonar.projectKey=jenkins-pipeline" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=30b3f3338a4d7df78d7648df6ec9a2d703089a07"'
       }
     }
 
