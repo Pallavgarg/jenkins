@@ -1,9 +1,7 @@
 def calc():
     return "Hello World!"
-
-
 def sums(a,b):
-    return a + b +c
+    return a + b
 
 
 if __name__ == '__main__':
