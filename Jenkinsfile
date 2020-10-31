@@ -22,7 +22,7 @@ pipeline {
     }
     stage('build && SonarQube analysis') {
             steps {
-                withSonarQubeEnv('sonarqube') {
+                withSonarQubeEnv('F:\sonar-scanner-cli-4.5.0.2216-windows\sonar-scanner-4.5.0.2216-windows\bin') {
                     // Optionally use a Maven environment you've configured already
                     withMaven(maven:'Maven 3.5') {
                         bat 'mvn clean package sonar:sonar'
