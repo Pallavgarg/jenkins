@@ -20,16 +20,7 @@ pipeline {
         bat 'python -m pytest tests/'
       }
     }
-    stage('build && SonarQube analysis') {
-            steps {
-                withSonarQubeEnv('F:\sonar-scanner-cli-4.5.0.2216-windows\sonar-scanner-4.5.0.2216-windows\bin') {
-                    // Optionally use a Maven environment you've configured already
 
-                    sonar-scanner.bat -D"sonar.projectKey=jenkins-pipeline" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=30b3f3338a4d7df78d7648df6ec9a2d703089a07"
-
-                }
-            }
-        }
 
   }
 }
